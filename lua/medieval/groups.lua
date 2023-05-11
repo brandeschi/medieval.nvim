@@ -145,7 +145,8 @@ M.setup = function()
     Number = { link = "GruvboxPurpleBold" },
     Float = { link = "GruvboxPurple" },
     Type = { link = "GruvboxYellow" },
-    StorageClass = { link = "GruvboxOrange" },
+    -- StorageClass = { link = "GruvboxOrange" },
+    StorageClass = { link = "GruvboxRed" },
     Structure = { link = "GruvboxAqua" },
     Typedef = { link = "GruvboxYellow" },
     Tag = { link = "GruvboxFg1" },
@@ -165,7 +166,7 @@ M.setup = function()
     -- LSP SEMHL
     ["@lsp.type.comment"] = { link = "Comment" },
     ["@lsp.type.variable"] = { link = "@variable" },
-    ["@lsp.type.parameter"] = { fg = "#EBA487" },
+    ["@lsp.type.parameter"] = { link = "@variable" },
     ["@lsp.type.type"] = { link = "@type" },
     ["@lsp.type.function"] = { link = "@function" },
     ["@lsp.type.class"] = { fg = palette.broBronze }, -- Might change this color idk
