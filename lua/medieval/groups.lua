@@ -40,7 +40,7 @@ M.setup = function()
     GruvboxBg2 = { fg = palette.none },
     GruvboxBg3 = { fg = palette.none },
     GruvboxBg4 = { fg = palette.none },
-    GruvboxRed = { fg = palette.slightlySilver }, -- Keywords
+    GruvboxRed = { fg = palette.prettyPurple}, -- Keywords
     GruvboxRedBold = { fg = palette.broBronze, bold = config.bold },
     GruvboxGreen = { fg = palette.none },
     GruvboxGreenBold = { fg = palette.gleefulGreen, bold = config.bold }, -- func
@@ -50,7 +50,7 @@ M.setup = function()
     GruvboxBlueBold = { fg = palette.traditionalTan, bold = config.bold }, -- cmp matching
     GruvboxPurple = { fg = palette.giantGreen },
     GruvboxPurpleBold = { fg = palette.giantGreen, bold = config.bold }, -- number
-    GruvboxAqua = { fg = palette.prettyPurple }, -- This is the color I am talking about in GruvboxRed comment
+    GruvboxAqua = { fg = palette.slightlySilver }, -- This is the color I am talking about in GruvboxRed comment
     GruvboxAquaBold = { fg = palette.none, bold = config.bold },
     GruvboxOrange = { fg = palette.willingWhite }, -- Links to punctuation
     GruvboxOrangeBold = { fg = palette.boldRoyalBlue, bold = config.bold },
@@ -165,11 +165,13 @@ M.setup = function()
     Whitespace = { fg = palette.willingWhite },
     -- LSP SEMHL
     ["@lsp.type.comment"] = { link = "Comment" },
+    ["@lsp.type.function"] = { link = "@function" },
     ["@lsp.type.variable"] = { link = "@variable" },
     ["@lsp.type.parameter"] = { link = "@variable" },
     ["@lsp.type.type"] = { link = "@type" },
-    ["@lsp.type.function"] = { link = "@function" },
-    ["@lsp.type.class"] = { fg = palette.broBronze }, -- Might change this color idk
+    -- C/Cpp
+    ["@lsp.type.class"] = { fg = palette.broBronze },
+    -- ["@lsp.typemod.macro.globalscope.cpp"] = { link = "@keyword" },
     -- ["@lsp.type.class"] = { fg = "#FFF3B2" },
     -- ["@lsp.type.class"] = { fg = "#FFEB7F" },
     -- ["@lsp.type.class"] = { fg = palette.boldRoyalBlue },

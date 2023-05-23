@@ -1,7 +1,8 @@
 local M = {}
 
 M.palette = {
-    basicallyBlack = "#0B0C0D", -- BG
+    -- basicallyBlack = "#0B0C0D", -- BG
+    basicallyBlack = "#1F2021", -- BG
     silentSlate =    "#17191B", -- CursorLine color
     willingWhite =   "#C4C2BF", -- () & {} & []
     traditionalTan = "#DCC091", -- Normal text
@@ -13,7 +14,8 @@ M.palette = {
     goodGreen =      "#2E9469", -- Strings
     royaleRed =      "#E14169", -- OP symbols
     slightlySilver = "#6C747A", -- Keywords
-    semiSilver =     "#3F3E41", -- Comments
+    -- semiSilver =     "#3F3E41", -- Comments
+    semiSilver =     "#525154", -- Comments
     shiningSilver =  "#3B3E41", -- Brighter silentSlate
     broBronze =      "#CD7F32", -- Class/Struct
 
