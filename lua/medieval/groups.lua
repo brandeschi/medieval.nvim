@@ -40,8 +40,9 @@ M.setup = function()
     GruvboxBg2 = { fg = palette.none },
     GruvboxBg3 = { fg = palette.none },
     GruvboxBg4 = { fg = palette.none },
+    MedBronze = { fg = palette.broBronze },
     GruvboxRed = { fg = palette.prettyPurple}, -- Keywords
-    GruvboxRedBold = { fg = palette.broBronze, bold = config.bold },
+    GruvboxRedBold = { fg = palette.broBronze, bold = config.bold }, -- ??
     GruvboxGreen = { fg = palette.none },
     GruvboxGreenBold = { fg = palette.gleefulGreen, bold = config.bold }, -- func
     GruvboxYellow = { fg = palette.boldRoyalBlue }, -- types
@@ -75,6 +76,7 @@ M.setup = function()
     GruvboxPurpleUnderline = { undercurl = config.undercurl, sp = palette.none },
     GruvboxAquaUnderline = { undercurl = config.undercurl, sp = palette.none },
     GruvboxOrangeUnderline = { undercurl = config.undercurl, sp = palette.none },
+
     -- HL groups start here
     Normal = config.transparent_mode and { fg = palette.traditionalTan, bg = nil } or { fg = palette.traditionalTan, bg = palette.basicallyBlack },
     NormalFloat = config.transparent_mode and { fg = palette.traditionalTan, bg = nil } or { fg = palette.traditionalTan, bg = palette.basicallyBlack },
@@ -172,6 +174,8 @@ M.setup = function()
     -- C/Cpp
     ["@lsp.type.class"] = { fg = palette.broBronze },
     -- ["@lsp.typemod.macro.globalscope.cpp"] = { link = "@keyword" },
+    -- TS
+    ["@lsp.type.namespace.typescriptreact"] = { link = "MedBronze" },
     -- ["@lsp.type.class"] = { fg = "#FFF3B2" },
     -- ["@lsp.type.class"] = { fg = "#FFEB7F" },
     -- ["@lsp.type.class"] = { fg = palette.boldRoyalBlue },
