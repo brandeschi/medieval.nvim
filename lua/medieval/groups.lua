@@ -41,8 +41,9 @@ M.setup = function()
     GruvboxBg3 = { fg = palette.none },
     GruvboxBg4 = { fg = palette.none },
     MedBronze = { fg = palette.broBronze },
-    GruvboxRed = { fg = palette.prettyPurple}, -- Keywords
-    GruvboxRedBold = { fg = palette.broBronze, bold = config.bold }, -- ??
+    GruvboxRed = { fg = palette.boldRoyalBlue}, -- Keywords
+    GruvboxRedBold = { fg = palette.boldRoyalBlue, bold = config.bold }, -- Keywords
+    -- GruvboxRedBold = { fg = palette.broBronze, bold = config.bold }, -- ??
     GruvboxGreen = { fg = palette.none },
     GruvboxGreenBold = { fg = palette.gleefulGreen, bold = config.bold }, -- func
     GruvboxYellow = { fg = palette.boldRoyalBlue }, -- types
@@ -51,22 +52,22 @@ M.setup = function()
     GruvboxBlueBold = { fg = palette.traditionalTan, bold = config.bold }, -- cmp matching
     GruvboxPurple = { fg = palette.giantGreen },
     GruvboxPurpleBold = { fg = palette.giantGreen, bold = config.bold }, -- number
-    GruvboxAqua = { fg = palette.slightlySilver }, -- This is the color I am talking about in GruvboxRed comment
+    GruvboxAqua = { fg = palette.prettyPurple }, -- This is the color I am talking about in GruvboxRed comment
     GruvboxAquaBold = { fg = palette.none, bold = config.bold },
     GruvboxOrange = { fg = palette.willingWhite }, -- Links to punctuation
     GruvboxOrangeBold = { fg = palette.boldRoyalBlue, bold = config.bold },
     GruvboxRedSign = config.transparent_mode and { fg = palette.royaleRed, reverse = config.invert_signs }
-      or { fg = palette.royaleRed, bg = palette.basicallyBlack, reverse = config.invert_signs },
+      or { fg = palette.royaleRed, bg = palette.basementBlue, reverse = config.invert_signs },
     GruvboxGreenSign = config.transparent_mode and { fg = palette.gleefulGreen, reverse = config.invert_signs }
-      or { fg = palette.gleefulGreen, bg = palette.basicallyBlack, reverse = config.invert_signs },
-    GruvboxYellowSign = config.transparent_mode and { fg = palette.none, reverse = config.invert_signs }
-      or { fg = palette.none, bg = palette.none, reverse = config.invert_signs },
+      or { fg = palette.gleefulGreen, bg = palette.basementBlue, reverse = config.invert_signs },
+    GruvboxYellowSign = config.transparent_mode and { fg = palette.none, reverse = config.invert_signs } -- diag-warn
+      or { fg = palette.traditionalTan, bg = palette.basementBlue, reverse = config.invert_signs },
     GruvboxBlueSign = config.transparent_mode and { fg = palette.none, reverse = config.invert_signs }
       or { fg = palette.none, bg = palette.none, reverse = config.invert_signs },
     GruvboxPurpleSign = config.transparent_mode and { fg = palette.none, reverse = config.invert_signs }
       or { fg = palette.none, bg = palette.none, reverse = config.invert_signs },
     GruvboxAquaSign = config.transparent_mode and { fg = palette.slightlySilver, reverse = config.invert_signs }
-      or { fg = palette.slightlySilver, bg = palette.basicallyBlack, reverse = config.invert_signs },
+      or { fg = palette.slightlySilver, bg = palette.basementBlue, reverse = config.invert_signs },
     GruvboxOrangeSign = config.transparent_mode and { fg = palette.none, reverse = config.invert_signs }
       or { fg = palette.none, bg = palette.none, reverse = config.invert_signs },
     GruvboxRedUnderline = { undercurl = config.undercurl, sp = palette.none },
@@ -78,18 +79,18 @@ M.setup = function()
     GruvboxOrangeUnderline = { undercurl = config.undercurl, sp = palette.none },
 
     -- HL groups start here
-    Normal = config.transparent_mode and { fg = palette.traditionalTan, bg = nil } or { fg = palette.traditionalTan, bg = palette.basicallyBlack },
-    NormalFloat = config.transparent_mode and { fg = palette.traditionalTan, bg = nil } or { fg = palette.traditionalTan, bg = palette.basicallyBlack },
-    NormalNC = config.dim_inactive and { fg = palette.traditionalTan, bg = palette.silentSlate } or { link = "Normal" },
-    CursorLine = { bg = palette.silentSlate },
+    Normal = config.transparent_mode and { fg = palette.traditionalTan, bg = nil } or { fg = palette.traditionalTan, bg = palette.basementBlue },
+    NormalFloat = config.transparent_mode and { fg = palette.traditionalTan, bg = nil } or { fg = palette.traditionalTan, bg = palette.basementBlue },
+    NormalNC = config.dim_inactive and { fg = palette.traditionalTan, bg = palette.basementBlue } or { link = "Normal" },
+    CursorLine = { bg = palette.basementBlue },
     CursorColumn = { link = "CursorLine" },
-    TabLineFill = { fg = palette.willingWhite, bg = palette.silentSlate, reverse = config.invert_tabline },
-    TabLineSel = { fg = palette.willingWhite, bg = palette.basicallyBlack, reverse = config.invert_tabline },
+    TabLineFill = { fg = palette.willingWhite, bg = palette.basementBlue, reverse = config.invert_tabline },
+    TabLineSel = { fg = palette.willingWhite, bg = palette.basementBlue, reverse = config.invert_tabline },
     TabLine = { link = "TabLineFill" },
-    MatchParen = { fg = palette.royaleRed, bg = palette.basicallyBlack, bold = config.bold },
+    MatchParen = { fg = palette.royaleRed, bg = palette.basementBlue, bold = config.bold },
     ColorColumn = { bg = palette.none },
     Conceal = { fg = palette.none },
-    CursorLineNr = { fg = palette.traditionalTan, bg = palette.basicallyBlack },
+    CursorLineNr = { fg = palette.traditionalTan, bg = palette.basementBlue },
     NonText = { link = "GruvboxBg2" },
     SpecialKey = { link = "GruvboxFg4" },
     Visual = { bg = palette.shiningSilver, reverse = config.invert_selection },
@@ -99,21 +100,21 @@ M.setup = function()
     CurSearch = { link = "IncSearch" },
     QuickFixLine = { fg = palette.none, bg = palette.none, bold = config.bold },
     Underlined = { fg = palette.giantGreen, underline = config.underline },
-    StatusLine = { fg = palette.traditionalTan, bg = palette.silentSlate, reverse = config.inverse },
-    StatusLineNC = { fg = palette.traditionalTan, bg = palette.basicallyBlack, reverse = config.inverse },
+    StatusLine = { fg = palette.traditionalTan, bg = palette.basementBlue, reverse = config.inverse },
+    StatusLineNC = { fg = palette.traditionalTan, bg = palette.basementBlue, reverse = config.inverse },
     WinBar = { link = "Normal" },
     WinBarNC = { link = "NormalNC" },
-    WinSeparator = config.transparent_mode and { fg = palette.traditionalTan, bg = nil } or { fg = palette.silentSlate, bg = palette.basicallyBlack },
-    WildMenu = { fg = palette.traditionalTan, bg = palette.silentSlate, bold = config.bold },
+    WinSeparator = config.transparent_mode and { fg = palette.traditionalTan, bg = nil } or { fg = palette.basicallyBlack, bg = palette.basicallyBlack },
+    WildMenu = { fg = palette.traditionalTan, bg = palette.basementBlue, bold = config.bold },
     Directory = { link = "GruvboxBlueBold" },
     Title = { link = "GruvboxGreenBold" },
-    ErrorMsg = { fg = palette.royaleRed, bg = palette.basicallyBlack, bold = config.bold },
+    ErrorMsg = { fg = palette.royaleRed, bg = palette.basementBlue, bold = config.bold },
     MoreMsg = { link = "GruvboxYellowBold" },
     ModeMsg = { link = "GruvboxYellowBold" },
     Question = { link = "GruvboxOrangeBold" },
     WarningMsg = { link = "GruvboxRedBold" },
     LineNr = { fg = palette.shiningSilver }, -- @Link
-    SignColumn = config.transparent_mode and { bg = nil } or { bg = palette.basicallyBlack }, --@Link
+    SignColumn = config.transparent_mode and { bg = nil } or { bg = palette.basementBlue }, --@Link
     Folded = { fg = palette.giantGreen, bg = palette.shiningSilver, italic = config.italic.folds },
     FoldColumn = config.transparent_mode and { fg = palette.traditionalTan, bg = nil } or { fg = palette.traditionalTan, bg = palette.willingWhite }, -- IDK
     Cursor = { reverse = config.inverse },
@@ -142,24 +143,24 @@ M.setup = function()
     PreCondit = { link = "GruvboxAqua" },
     Constant = { link = "GruvboxPurple" },
     Character = { link = "GruvboxPurple" },
-    String = { fg = palette.goodGreen, italic = config.italic.strings },
+    String = { fg = palette.giantGreen, italic = config.italic.strings },
     Boolean = { link = "GruvboxPurpleBold" },
     Number = { link = "GruvboxPurpleBold" },
     Float = { link = "GruvboxPurple" },
-    Type = { link = "GruvboxYellow" },
+    Type = { link = "GruvboxRedBold" },
     -- StorageClass = { link = "GruvboxOrange" },
     StorageClass = { link = "GruvboxRed" },
     Structure = { link = "GruvboxAqua" },
     Typedef = { link = "GruvboxYellow" },
     Tag = { link = "GruvboxFg1" },
-    Pmenu = { fg = palette.traditionalTan, bg = palette.silentSlate },
+    Pmenu = { fg = palette.traditionalTan, bg = palette.basementBlue },
     PmenuSel = { fg = palette.traditionalTan, bg = palette.shiningSilver, bold = config.bold },
-    PmenuSbar = { bg = palette.silentSlate },
+    PmenuSbar = { bg = palette.basementBlue },
     PmenuThumb = { bg = palette.gleefulGreen },
-    DiffDelete = { fg = palette.royaleRed, bg = palette.basicallyBlack, reverse = config.inverse },
-    DiffAdd = { fg = palette.gleefulGreen, bg = palette.basicallyBlack, reverse = config.inverse },
-    DiffChange = { fg = palette.boldRoyalBlue, bg = palette.basicallyBlack, reverse = config.inverse },
-    DiffText = { fg = palette.traditionalTan, bg = palette.basicallyBlack, reverse = config.inverse },
+    DiffDelete = { fg = palette.royaleRed, bg = palette.basementBlue, reverse = config.inverse },
+    DiffAdd = { fg = palette.gleefulGreen, bg = palette.basementBlue, reverse = config.inverse },
+    DiffChange = { fg = palette.boldRoyalBlue, bg = palette.basementBlue, reverse = config.inverse },
+    DiffText = { fg = palette.traditionalTan, bg = palette.basementBlue, reverse = config.inverse },
     SpellCap = { link = "GruvboxBlueUnderline" },
     SpellBad = { link = "GruvboxRedUnderline" },
     SpellLocal = { link = "GruvboxAquaUnderline" },
@@ -172,10 +173,13 @@ M.setup = function()
     ["@lsp.type.parameter"] = { link = "@variable" },
     ["@lsp.type.type"] = { link = "@type" },
     -- C/Cpp
-    ["@lsp.type.class"] = { fg = palette.broBronze },
+    ["@lsp.type.class.cpp"] = { fg = palette.broBronze },
+    ["@lsp.type.enum.cpp"] = { fg = palette.broBronze },
+    -- ["@lsp.mod.filescope.cpp"] = { link = "@function" },
     -- ["@lsp.typemod.macro.globalscope.cpp"] = { link = "@keyword" },
     -- TS
     ["@lsp.type.namespace.typescriptreact"] = { link = "MedBronze" },
+    ["@lsp.type.interface.typescriptreact"] = { link = "@type" },
     -- ["@lsp.type.class"] = { fg = "#FFF3B2" },
     -- ["@lsp.type.class"] = { fg = "#FFEB7F" },
     -- ["@lsp.type.class"] = { fg = palette.boldRoyalBlue },
