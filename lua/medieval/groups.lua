@@ -61,8 +61,8 @@ M.setup = function()
     -- GruvboxRedBold = { fg = palette.broBronze, bold = config.bold }, -- ??
     GruvboxGreen = { fg = palette.none },
     GruvboxGreenBold = { fg = palette.gleefulGreen, bold = config.bold }, -- func
-    GruvboxYellow = { fg = palette.boldRoyalBlue }, -- types
-    GruvboxYellowBold = { fg = palette.willingWhite, bold = config.bold }, -- ModeMsg
+    MedievalYellow = { fg = palette.traditionalTan }, -- types
+    MedievalYellowBold = { fg = palette.traditionalTan, bold = config.bold }, -- ModeMsg
     GruvboxBlue = { fg = palette.boringBlue }, -- Prop
     GruvboxBlueBold = { fg = palette.none, bold = config.bold }, -- cmp matching
     GruvboxPurple = { fg = palette.giantGreen },
@@ -71,11 +71,11 @@ M.setup = function()
     GruvboxAquaBold = { fg = palette.none, bold = config.bold },
     GruvboxOrange = { fg = palette.willingWhite }, -- Links to punctuation
     GruvboxOrangeBold = { fg = palette.boldRoyalBlue, bold = config.bold },
-    GruvboxRedSign = config.transparent_mode and { fg = palette.royaleRed, reverse = config.invert_signs }
+    MedievalRoyalRedSign = config.transparent_mode and { fg = palette.royaleRed, reverse = config.invert_signs }
       or { fg = palette.royaleRed, bg = palette.basementBlue, reverse = config.invert_signs },
     GruvboxGreenSign = config.transparent_mode and { fg = palette.gleefulGreen, reverse = config.invert_signs }
       or { fg = palette.gleefulGreen, bg = palette.basementBlue, reverse = config.invert_signs },
-    GruvboxYellowSign = config.transparent_mode and { fg = palette.none, reverse = config.invert_signs } -- diag-warn
+    MedievalYellowSign = config.transparent_mode and { fg = palette.none, reverse = config.invert_signs } -- diag-warn
       or { fg = palette.traditionalTan, bg = palette.basementBlue, reverse = config.invert_signs },
     GruvboxBlueSign = config.transparent_mode and { fg = palette.none, reverse = config.invert_signs }
       or { fg = palette.none, bg = palette.none, reverse = config.invert_signs },
@@ -87,7 +87,7 @@ M.setup = function()
       or { fg = palette.none, bg = palette.none, reverse = config.invert_signs },
     GruvboxRedUnderline = { undercurl = config.undercurl, sp = palette.none },
     GruvboxGreenUnderline = { undercurl = config.undercurl, sp = palette.none },
-    GruvboxYellowUnderline = { undercurl = config.undercurl, sp = palette.none },
+    MedievalYellowUnderline = { undercurl = config.undercurl, sp = palette.none },
     GruvboxBlueUnderline = { undercurl = config.undercurl, sp = palette.giantGreen },
     GruvboxPurpleUnderline = { undercurl = config.undercurl, sp = palette.none },
     GruvboxAquaUnderline = { undercurl = config.undercurl, sp = palette.none },
@@ -200,13 +200,16 @@ M.setup = function()
     -- ["@lsp.type.class"] = { fg = "#FFEB7F" },
     -- ["@lsp.type.class"] = { fg = palette.boldRoyalBlue },
     -- ["@lsp.type.keyword"] = { link = "Comment" },
+    -- Zig
+    -- ["@lsp.type.type.zig"] = { link = "MedievalFg" },
+    ["@lsp.type.operator.zig"] = { link = "MedievalRoyalRed" },
     -- LSP Diagnostic
-    DiagnosticError = { link = "MedievalRoyalBlue" },
+    DiagnosticError = { link = "MedievalRoyalRed" },
     DiagnosticSignError = { link = "MedievalRoyalRedSign" },
     DiagnosticUnderlineError = { link = "MedievalRoyalRedUnderline" },
-    DiagnosticWarn = { link = "GruvboxYellow" },
-    DiagnosticSignWarn = { link = "GruvboxYellowSign" },
-    DiagnosticUnderlineWarn = { link = "GruvboxYellowUnderline" },
+    DiagnosticWarn = { link = "MedievalYellow" },
+    DiagnosticSignWarn = { link = "MedievalYellowSign" },
+    DiagnosticUnderlineWarn = { link = "MedievalYellowUnderline" },
     DiagnosticInfo = { link = "MedievalBlue" },
     DiagnosticSignInfo = { link = "MedievalBlueSign" },
     DiagnosticUnderlineInfo = { link = "MedievalBlueUnderline" },
@@ -218,7 +221,7 @@ M.setup = function()
     DiagnosticFloatingInfo = { link = "MedievalBlue" },
     DiagnosticFloatingHint = { link = "MedievalPurple" },
     DiagnosticVirtualTextError = { link = "MedievalRoyalRed" },
-    DiagnosticVirtualTextWarn = { link = "GruvboxYellow" },
+    DiagnosticVirtualTextWarn = { link = "MedievalYellow" },
     DiagnosticVirtualTextInfo = { link = "MedievalBlue" },
     DiagnosticVirtualTextHint = { link = "MedievalPurple" },
     LspReferenceRead = { link = "MedievalWhiteBold" },
@@ -875,9 +878,9 @@ M.setup = function()
     NotifyTRACEBorder = { link = "GruvboxGreen" },
     NotifyTRACEIcon = { link = "GruvboxGreen" },
     NotifyTRACETitle = { link = "GruvboxGreen" },
-    NotifyWARNBorder = { link = "GruvboxYellow" },
-    NotifyWARNIcon = { link = "GruvboxYellow" },
-    NotifyWARNTitle = { link = "GruvboxYellow" },
+    NotifyWARNBorder = { link = "MedievalYellow" },
+    NotifyWARNIcon = { link = "MedievalYellow" },
+    NotifyWARNTitle = { link = "MedievalYellow" },
   }
 
   for group, hl in pairs(config.overrides) do
