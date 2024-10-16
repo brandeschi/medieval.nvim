@@ -17,7 +17,8 @@ M.palette = {
   semiSilver =     "#525154", -- WinSeparator
   slightlySilver = "#6C747A", -- Comments
   traditionalTan = "#C6AC82", -- Normal text
-  willingWhite =   "#8C8C8C", -- () & {} & []
+  -- willingWhite =   "#8C8C8C", -- () & {} & []
+  willingWhite =   "#E3E3E3", -- () & {} & []
 
   none =           "#FF00FF",
 }
