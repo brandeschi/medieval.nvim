@@ -2,7 +2,8 @@ local M = {}
 
 M.palette = {
   basementBlue =   "#20212B", -- CursorLine
-  basicallyBlack = "#181818", -- BG
+  -- basicallyBlack = "#181818", -- BG
+  basicallyBlack = "#0B0B0B", -- BG
   boldRoyalBlue =  "#6585E7", -- Types/Special
   -- boringBlue =     "#5572AA", -- Props/slightly less imp than brb
   -- boringBlue =     "#D9D9D9", -- Props/slightly less imp than brb
@@ -18,7 +19,7 @@ M.palette = {
   slightlySilver = "#6C747A", -- Comments
   traditionalTan = "#C6AC82", -- Normal text
   -- willingWhite =   "#8C8C8C", -- () & {} & []
-  willingWhite =   "#E3E3E3", -- () & {} & []
+  willingWhite =   "#CCCCCC", -- () & {} & []
 
   none =           "#FF00FF",
 }
