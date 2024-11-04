@@ -82,8 +82,8 @@ M.setup = function()
     SpecialKey = { link = "MedievalRoyalRed" },
     Visual = { fg = palette.willingWhite, bg = palette.boringBlue, reverse = config.invert_selection },
     VisualNOS = { link = "Visual" },
-    Search = { fg = palette.electricBlue, bg = palette.slightlySilver, reverse = config.inverse },
-    IncSearch = { fg = palette.electricBlue, bg = palette.slightlySilver, reverse = config.inverse },
+    Search = { fg = palette.electricBlue, bg = palette.basicallyBlack, reverse = config.inverse },
+    IncSearch = { fg = palette.electricBlue, bg = palette.basicallyBlack, reverse = config.inverse },
     CurSearch = { link = "IncSearch" },
     QuickFixLine = { fg = palette.traditionalTan, bg = palette.basicallyBlack, bold = config.bold },
     Underlined = { fg = palette.giantGreen, underline = config.underline },
@@ -160,8 +160,8 @@ M.setup = function()
     ["@lsp.type.operator"] = { link = "@operator" },
     ["@lsp.type.type"] = { link = "@type" },
     -- C/Cpp
-    ["@lsp.type.class.cpp"] = { fg = palette.broBronze },
-    ["@lsp.type.enum.cpp"] = { fg = palette.broBronze },
+    ["@lsp.type.class.cpp"] = { link = "Type" },
+    ["@lsp.type.enum.cpp"] = { link = "Type" },
     -- ["@lsp.mod.filescope.cpp"] = { link = "@function" },
     -- ["@lsp.typemod.macro.globalscope.cpp"] = { link = "@keyword" },
     -- TS
@@ -222,7 +222,7 @@ M.setup = function()
     ["@define"] = { link = "Define" },
     ["@operator"] = { link = "Operator" },
     ["@punctuation.delimiter"] = { link = "Delimiter" },
-    ["@punctuation.bracket"] = { link = "MedievalSilverBold" },
+    ["@punctuation.bracket"] = { link = "MedievalBronze" },
     ["@punctuation.special"] = { link = "Delimiter" },
     ["@string"] = { link = "String" },
     ["@string.regex"] = { link = "String" },
@@ -536,7 +536,7 @@ M.setup = function()
     -- C
     cOperator = { link = "MedievalLightGreen" },
     cppOperator = { link = "MedievalLightGreen" },
-    cStructure = { link = "MedievalBronze" },
+    cStructure = { link = "Type" },
     -- python
     pythonBuiltin = { link = "None" },
     pythonBuiltinObj = { link = "None" },
