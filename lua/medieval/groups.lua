@@ -426,12 +426,12 @@ M.setup = function()
     CmpItemKindConstant = { link = "MedievalElectricBlue" },
     CmpItemKindStruct = { link = "MedievalBronze" },
     CmpItemKindTypeParameter = { link = "MedievalRoyalBlue" },
-    diffAdded = { link = "None" },
+    diffAdded = { link = "MedievalLightGreen" },
     diffRemoved = { link = "MedievalRoyalRed" },
-    diffChanged = { link = "MedievalPurple" },
-    diffFile = { link = "None" },
+    diffChanged = { link = "MedievalBronze" },
+    diffFile = { link = "MedievalWhite" },
     diffNewFile = { link = "MedievalRoyalBlue" },
-    diffOldFile = { link = "None" },
+    diffOldFile = { link = "MedievalPurple" },
     diffLine = { link = "MedievalBlue" },
     diffIndexLine = { link = "diffChanged" },
     -- navic (highlight icons)
@@ -863,6 +863,11 @@ M.setup = function()
     NotifyWARNBorder = { link = "MedievalTan" },
     NotifyWARNIcon = { link = "MedievalTan" },
     NotifyWARNTitle = { link = "MedievalTan" },
+    -- vim-fugitive
+    fugitiveUnstagedHeading = { link = "MedievalPurple" },
+    fugitiveStagedHeading = { link = "MedievalGreen" },
+    fugitiveUnstagedModifier = { link = "MedievalRoyalRed" },
+    fugitiveStagedModifier = { link = "MedievalLightGreen" },
   }
 
   for group, hl in pairs(config.overrides) do
