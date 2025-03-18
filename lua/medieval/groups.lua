@@ -142,7 +142,7 @@ M.setup = function()
     StorageClass = { link = "MedievalRoyalBlue" },
     Structure = { link = "MedievalPurple" },
     Typedef = { link = "MedievalRoyalBlue" },
-    Tag = { link = "MedievalTan" }, -- @unknown
+    Tag = { link = "MedievalGreen" },
     Pmenu = { fg = palette.traditionalTan, bg = palette.basicallyBlack },
     PmenuSel = { fg = palette.traditionalTan, bg = palette.semiSilver, bold = config.bold },
     PmenuSbar = { bg = palette.basicallyBlack },
