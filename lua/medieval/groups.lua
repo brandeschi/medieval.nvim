@@ -87,7 +87,11 @@ M.setup = function()
     CurSearch = { link = "IncSearch" },
     QuickFixLine = { fg = palette.traditionalTan, bg = palette.basicallyBlack, bold = config.bold },
     Underlined = { fg = palette.giantGreen, underline = config.underline },
-    StatusLine = { reverse = config.inverse },
+    Statusline = { reverse = config.inverse, bold = true },
+    StatusLineInsert = { fg = palette.basicallyBlack, bg = palette.giantGreen, bold = true },
+    StatusLineVisual = { fg = palette.basicallyBlack, bg = palette.boldRoyalBlue, bold = true },
+    StatusLineReplace = { fg = palette.basicallyBlack, bg = palette.broBronze, bold = true },
+    StatusLineCmdLine = { fg = palette.basicallyBlack, bg = palette.prettyPurple, bold = true },
     StatusLineNC = { fg = palette.basicallyBlack, bg = palette.basicallyBlack, reverse = config.inverse },
     WinBar = { link = "Normal" },
     WinBarNC = { link = "NormalNC" },
@@ -104,9 +108,9 @@ M.setup = function()
     SignColumn = config.transparent_mode and { bg = nil } or { bg = palette.basicallyBlack },
     Folded = { fg = palette.giantGreen, bg = palette.semiSilver, italic = config.italic.folds },
     FoldColumn = config.transparent_mode and { fg = palette.traditionalTan, bg = nil } or { fg = palette.traditionalTan, bg = palette.willingWhite }, -- IDK
-    Cursor = { reverse = config.inverse },
+    Cursor = { bg = palette.traditionalTan, fg = palette.royaleRed },
     vCursor = { link = "Cursor" },
-    iCursor = { link = "Cursor" },
+    iCursor = { bg = palette.gleefulGreen },
     lCursor = { link = "Cursor" },
     Special = { fg = palette.boldRoyalBlue }, --@Link
     Delimiter = { link = "MedievalRoyalRed" }, -- Make option?
