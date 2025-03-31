@@ -2,8 +2,8 @@ local M = {}
 
 M.palette = {
   basementBlue =   "#20212B", -- CursorLine
-  -- basicallyBlack = "#181818", -- BG
-  basicallyBlack = "#2A2A2A", -- BG
+  basicallyBlack = "#191919", -- BG
+  -- basicallyBlack = "#2A2A2A", -- BG
   boldRoyalBlue =  "#6585E7", -- Types/Special
   -- boringBlue =     "#5572AA", -- Props/slightly less imp than brb
   boringBlue =     "#36648B", -- Props/slightly less imp than brb

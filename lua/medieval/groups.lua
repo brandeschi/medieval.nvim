@@ -108,7 +108,7 @@ M.setup = function()
     SignColumn = config.transparent_mode and { bg = nil } or { bg = palette.basicallyBlack },
     Folded = { fg = palette.giantGreen, bg = palette.semiSilver, italic = config.italic.folds },
     FoldColumn = config.transparent_mode and { fg = palette.traditionalTan, bg = nil } or { fg = palette.traditionalTan, bg = palette.willingWhite }, -- IDK
-    Cursor = { bg = palette.traditionalTan, fg = palette.royaleRed },
+    Cursor = { bg = palette.traditionalTan, fg = palette.basicallyBlack },
     vCursor = { link = "Cursor" },
     iCursor = { bg = palette.gleefulGreen },
     lCursor = { link = "Cursor" },
