@@ -27,10 +27,14 @@ M.setup = function()
 
   local groups = {
     -- Base groups
-    MedievalBaseBlue = { fg = palette.basementBlue },
+    -- TODO: Change Link names and finish filling
+    MedievalBg = { fg = palette.basementBlue },
     MedievalBlack = { fg = palette.basicallyBlack },
-    MedievalTan = { fg = palette.traditionalTan },
-    MedievalTanBold = { fg = palette.traditionalTan, bold = config.bold }, -- ModeMsg
+    MedievalFg = { fg = palette.traditionalTan },
+    MedievalFgBold = { fg = palette.traditionalTan, bold = config.bold }, -- ModeMsg
+    -- MedievalTanBold = { fg = palette.traditionalTan, bold = config.bold }, -- ModeMsg
+    MedievalWhite = { fg = palette.willingWhite },
+    MedievalWhiteBold = { fg = palette.willingWhite, bold = config.bold },
     MedievalPurple = { fg = palette.prettyPurple },
     MedievalRoyalBlue = { fg = palette.boldRoyalBlue },
     MedievalRoyalBlueBold = { fg = palette.boldRoyalBlue, bold = config.bold },
@@ -44,6 +48,7 @@ M.setup = function()
     MedievalElectricBlue = { fg = palette.electricBlue },
     MedievalElectricBlueBold = { fg = palette.electricBlue, bold = config.bold },
     MedievalSlightlySilver = { fg = palette.slightlySilver },
+    MedievalShineSilver = { fg = palette.shiningSilver },
     MedievalSilver = { fg = palette.semiSilver },
     MedievalSilverBold = { fg = palette.semiSilver, bold = config.bold },
     MedievalBronze = { fg = palette.broBronze },
@@ -78,7 +83,7 @@ M.setup = function()
     ColorColumn = { bg = palette.basicallyBlack },
     Conceal = { fg = palette.prettyPurple },
     CursorLineNr = { fg = palette.broBronze, bg = palette.basicallyBlack, bold = true },
-    NonText = { link = "MedievalBaseBlue" },
+    NonText = { link = "MedievalBg" },
     SpecialKey = { link = "MedievalRoyalRed" },
     Visual = { fg = palette.willingWhite, bg = palette.boringBlue, reverse = config.invert_selection },
     VisualNOS = { link = "Visual" },
@@ -108,7 +113,9 @@ M.setup = function()
     SignColumn = config.transparent_mode and { bg = nil } or { bg = palette.basicallyBlack },
     Folded = { fg = palette.giantGreen, bg = palette.semiSilver, italic = config.italic.folds },
     FoldColumn = config.transparent_mode and { fg = palette.traditionalTan, bg = nil } or { fg = palette.traditionalTan, bg = palette.willingWhite }, -- IDK
-    Cursor = { bg = palette.traditionalTan, fg = palette.basicallyBlack },
+    -- Cursor = { bg = palette.traditionalTan, fg = palette.basicallyBlack },
+    -- Cursor = { reverse = config.inverse },
+    Cursor = { fg = palette.basicallyBlack, bg = "#91ADDC" },
     vCursor = { link = "Cursor" },
     iCursor = { bg = palette.gleefulGreen },
     lCursor = { link = "Cursor" },
@@ -167,6 +174,9 @@ M.setup = function()
     ["@lsp.type.class.cpp"] = { link = "Type" },
     ["@lsp.type.enum.cpp"] = { link = "Type" },
     -- ["@lsp.mod.filescope.cpp"] = { link = "@function" },
+    ["@keyword.modifier.cpp"] = { link = "MedievalWhite" },
+    -- ["@lsp.type.class.cpp"] = { fg = palette.broBronze },
+    -- ["@lsp.type.enum.cpp"] = { fg = palette.broBronze },
     -- ["@lsp.typemod.macro.globalscope.cpp"] = { link = "@keyword" },
     -- TS
     ["@lsp.type.namespace.typescriptreact"] = { link = "MedievalBronze" },
@@ -215,7 +225,7 @@ M.setup = function()
     ["@interface"] = { link = "Identifier" },
     ["@modifier"] = { link = "Identifier" },
     ["@regexp"] = { link = "SpecialChar" },
-    ["@struct"] = { link = "@constructor" },
+    -- ["@struct"] = { link = "@constructor" },
     ["@typeParameter"] = { link = "Type" },
     -- nvim-treesitter (0.8 compat)
     -- Adapted from https://github.com/nvim-treesitter/nvim-treesitter/commit/42ab95d5e11f247c6f0c8f5181b02e816caa4a4f#commitcomment-87014462
@@ -251,6 +261,8 @@ M.setup = function()
     -- ["@keyword.conditional"] = { link = "MedievalRoyalBlue" },
     ["@keyword.function"] = { link = "Keyword" },
     ["@keyword.return"] = { link = "Keyword" },
+    ["@keyword.import"] = { link = "MedievalWhite" },
+    ["@keyword.directive"] = { link = "MedievalWhite" },
     ["@conditional"] = { link = "Conditional" },
     ["@repeat"] = { link = "Repeat" },
     ["@debug"] = { link = "Debug" },
